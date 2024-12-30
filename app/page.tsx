@@ -10,6 +10,7 @@ interface Project {
   logo: string
   description: string
   url: string
+  themeColor: string
 }
 
 const projects: Project[] = [
@@ -17,19 +18,22 @@ const projects: Project[] = [
     name: "Trello",
     logo: "/trello-logo.png",
     description: "The visual collaboration tool that empowers teams to ideate, plan, manage, and deliver their best work.",
-    url: "https://trello.com"
+    url: "https://trello.com",
+    themeColor: "#298FCA"
   },
   {
     name: "Foundation",
     logo: "/foundation-logo.png",
     description: "Buy real estate with your friends & community - powered by web3. Create an investment proposal, share it with others, pool funds, and then sit back, and relax while we acquire it for you.",
-    url: "https://labeling-touch-529689.framer.app/"
+    url: "https://labeling-touch-529689.framer.app/",
+    themeColor: "#6E3FF3"
   },
   {
     name: "BuildOS",
     logo: "/crane-logo.png",
     description: "The first platform where code & no-code developers work together. The modern way to build software.",
-    url: "https://buildos.framer.website/"
+    url: "https://buildos.framer.website/",
+    themeColor: "#4A4A4A"
   }
 ]
 
