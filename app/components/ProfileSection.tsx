@@ -8,7 +8,7 @@ export default function ProfileSection() {
       <div className="relative w-24 h-24 rounded-full overflow-hidden mr-6">
         <Image
           src="/profile.jpg"
-          alt="Alexandros Mathopoulos"
+          alt="Lex Mathopoulos"
           fill
           className="object-cover"
           priority
@@ -17,7 +17,7 @@ export default function ProfileSection() {
       
       <div>
         <div className="flex items-center gap-4">
-          <h1 className="text-3xl font-bold">Alexandros Mathopoulos</h1>
+          <h1 className="text-3xl font-bold">Lex Mathopoulos</h1>
           <div className="flex gap-3">
             <a
               href="https://x.com/lex_build"
@@ -39,8 +39,8 @@ export default function ProfileSection() {
         </div>
         
         <p className="mt-2 text-lg text-gray-600 max-w-2xl">
-          Part time Designer, Engineer, & Product Manager. Day job is making Trello great.  
-          Currently focused on building some health apps.
+          Part time Designer, Engineer, & Product Manager.
+          Currently focused on building some new health apps and making Trello great again.
         </p>
       </div>
     </div>

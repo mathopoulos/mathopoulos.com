@@ -8,6 +8,7 @@ interface ProjectCardProps {
     text: string
     color: string
   }
+  role: string
 }
 
 export default function ProjectCard({ name, logo, onClick, label }: ProjectCardProps) {
