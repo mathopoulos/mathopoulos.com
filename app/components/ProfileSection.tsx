@@ -5,7 +5,7 @@ import { FaTwitter, FaGithub } from 'react-icons/fa'
 export default function ProfileSection() {
   return (
     <div className="flex items-center mb-12">
-      <div className="relative w-24 h-24 rounded-full overflow-hidden mr-6">
+      <div className="relative aspect-square w-24 rounded-full overflow-hidden mr-6 flex-shrink-0">
         <Image
           src="/profile.jpg"
           alt="Lex Mathopoulos"
