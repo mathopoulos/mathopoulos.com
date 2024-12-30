@@ -14,40 +14,22 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Foundation",
-    logo: "/foundation-logo.png",
-    description: "A revolutionary app that helps users manage their daily tasks with AI-powered suggestions and smart organization features.",
-    url: "https://project1.com"
-  },
-  {
-    name: "BuildOS",
-    logo: "/crane-logo.png",
-    description: "An innovative platform connecting freelancers with clients, featuring real-time collaboration tools and secure payments.",
-    url: "https://project2.com"
-  },
-  {
     name: "Trello",
     logo: "/trello-logo.png",
     description: "The visual collaboration tool that empowers teams to ideate, plan, manage, and deliver their best work.",
     url: "https://trello.com"
   },
   {
-    name: "Project 4",
-    logo: "/project1-logo.png",
-    description: "An e-commerce platform specializing in sustainable products, with carbon footprint tracking for each purchase.",
-    url: "https://project4.com"
+    name: "Foundation",
+    logo: "/foundation-logo.png",
+    description: "Buy real estate with your friends & community - powered by web3. Create an investment proposal, share it with others, pool funds, and then sit back, and relax while we acquire it for you.",
+    url: "https://labeling-touch-529689.framer.app/"
   },
   {
-    name: "Project 5",
-    logo: "/project1-logo.png",
-    description: "A social media analytics tool helping businesses understand and engage with their audience more effectively.",
-    url: "https://project5.com"
-  },
-  {
-    name: "Project 6",
-    logo: "/project1-logo.png",
-    description: "A cloud-based solution for small businesses to manage their inventory and supply chain efficiently.",
-    url: "https://project6.com"
+    name: "BuildOS",
+    logo: "/crane-logo.png",
+    description: "The first platform where code & no-code developers work together. The modern way to build software.",
+    url: "https://buildos.framer.website/"
   }
 ]
 

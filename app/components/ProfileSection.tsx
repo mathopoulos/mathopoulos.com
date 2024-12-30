@@ -19,12 +19,22 @@ export default function ProfileSection() {
         <div className="flex items-center gap-4">
           <h1 className="text-3xl font-bold">Alexandros Mathopoulos</h1>
           <div className="flex gap-3">
-            <Link href="https://twitter.com/YourTwitter" target="_blank" className="text-gray-600 hover:text-blue-400">
+            <a
+              href="https://x.com/lex_build"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-800 transition-colors"
+            >
               <FaTwitter size={24} />
-            </Link>
-            <Link href="https://github.com/YourGithub" target="_blank" className="text-gray-600 hover:text-gray-900">
+            </a>
+            <a
+              href="https://github.com/mathopoulos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-800 transition-colors"
+            >
               <FaGithub size={24} />
-            </Link>
+            </a>
           </div>
         </div>
         
