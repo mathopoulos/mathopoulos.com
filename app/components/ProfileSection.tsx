@@ -29,8 +29,8 @@ export default function ProfileSection() {
         </div>
         
         <p className="mt-2 text-lg text-gray-600 max-w-2xl">
-          Software engineer passionate about building innovative solutions. 
-          Currently working on exciting projects at the intersection of technology and user experience.
+          Part time Designer, Engineer, & Product Manager. Day job is making Trello great.  
+          Currently focused on building some health apps.
         </p>
       </div>
     </div>
