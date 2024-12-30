@@ -8,6 +8,11 @@ interface Project {
   description: string
   url: string
   themeColor: string
+  role: string
+  label?: {
+    text: string
+    color: string
+  }
 }
 
 interface ProjectModalProps {
@@ -45,6 +50,32 @@ export default function ProjectModal({ project, position, onClose }: ProjectModa
         </button>
 
         <div className="flex flex-col items-center">
+          <div className="flex gap-2 self-start mb-8">
+            <div 
+              className="text-xs font-medium px-2.5 py-1 rounded-full border"
+              style={{ 
+                backgroundColor: `${project.themeColor}15`,
+                color: project.themeColor,
+                borderColor: `${project.themeColor}30`
+              }}
+            >
+              {project.role}
+            </div>
+
+            {project.label && (
+              <div 
+                className="text-xs font-medium px-2.5 py-1 rounded-full border"
+                style={{ 
+                  backgroundColor: `${project.label.color}15`,
+                  color: project.label.color,
+                  borderColor: `${project.label.color}30`
+                }}
+              >
+                {project.label.text}
+              </div>
+            )}
+          </div>
+
           <div className="relative w-32 h-32 mb-6">
             <Image
               src={project.logo}
@@ -60,18 +91,31 @@ export default function ProjectModal({ project, position, onClose }: ProjectModa
             {project.description}
           </p>
 
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white px-8 py-3 rounded-lg flex items-center gap-2 transition-all transform hover:scale-105 hover:brightness-90 font-medium group"
-            style={{
-              backgroundColor: project.themeColor
-            }}
-          >
-            <span>Check it out!</span>
-            <HiArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          {project.name === "Stong" ? (
+            <button
+              disabled
+              className="text-white px-8 py-3 rounded-lg flex items-center gap-2 transition-all transform opacity-50 cursor-not-allowed font-medium"
+              style={{
+                backgroundColor: project.themeColor
+              }}
+            >
+              <span>Check it out!</span>
+              <HiArrowUpRight className="w-5 h-5" />
+            </button>
+          ) : (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white px-8 py-3 rounded-lg flex items-center gap-2 transition-all transform hover:scale-105 hover:brightness-90 font-medium group"
+              style={{
+                backgroundColor: project.themeColor
+              }}
+            >
+              <span>Check it out!</span>
+              <HiArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          )}
         </div>
       </div>
     </div>
