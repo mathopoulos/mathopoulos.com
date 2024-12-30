@@ -29,94 +29,88 @@ export default function ProjectModal({ project, position, onClose }: ProjectModa
   const originY = ((position.y / viewportHeight) * 100).toFixed(2)
 
   return (
-    <div 
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50 
-      animate-[fade-in_300ms_ease-out]"
-      onClick={onClose}
-    >
-      <div 
-        className="bg-white rounded-2xl max-w-2xl w-full p-8 relative shadow-xl
-        animate-[expand_500ms_cubic-bezier(0.16,1,0.3,1)]"
-        onClick={e => e.stopPropagation()}
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div
+        className="fixed inset-0 bg-black/40 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      <div
+        className="bg-white p-8 rounded-2xl max-w-2xl w-full mx-4 relative flex flex-col items-center text-center retro-shadow retro-border"
         style={{
-          transformOrigin: `${originX}% ${originY}%`
+          backgroundImage: 'url("data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M5 0h1L0 6V5zM6 5v1H5z"/%3E%3C/g%3E%3C/svg%3E")'
         }}
       >
         <button
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
           onClick={onClose}
-          className="absolute top-6 right-6 text-gray-500 hover:text-gray-700 transition-colors"
         >
           <IoClose size={24} />
         </button>
 
-        <div className="flex flex-col items-center">
-          <div className="flex gap-2 self-start mb-8">
+        <div className="flex gap-2 self-start mb-8">
+          <div 
+            className="text-xs font-medium px-2.5 py-1 rounded-full retro-border"
+            style={{ 
+              backgroundColor: `${project.themeColor}15`,
+              color: project.themeColor
+            }}
+          >
+            {project.role}
+          </div>
+
+          {project.label && (
             <div 
-              className="text-xs font-medium px-2.5 py-1 rounded-full border"
+              className="text-xs font-medium px-2.5 py-1 rounded-full retro-border"
               style={{ 
-                backgroundColor: `${project.themeColor}15`,
-                color: project.themeColor,
-                borderColor: `${project.themeColor}30`
+                backgroundColor: `${project.label.color}15`,
+                color: project.label.color
               }}
             >
-              {project.role}
+              {project.label.text}
             </div>
-
-            {project.label && (
-              <div 
-                className="text-xs font-medium px-2.5 py-1 rounded-full border"
-                style={{ 
-                  backgroundColor: `${project.label.color}15`,
-                  color: project.label.color,
-                  borderColor: `${project.label.color}30`
-                }}
-              >
-                {project.label.text}
-              </div>
-            )}
-          </div>
-
-          <div className="relative w-32 h-32 mb-6">
-            <Image
-              src={project.logo}
-              alt={`${project.name} logo`}
-              fill
-              className="object-contain drop-shadow-md"
-            />
-          </div>
-          
-          <h2 className="text-3xl font-bold mb-4">{project.name}</h2>
-          
-          <p className="text-gray-600 text-center mb-8 text-lg leading-relaxed">
-            {project.description}
-          </p>
-
-          {project.name === "Stong" ? (
-            <button
-              disabled
-              className="text-white px-8 py-3 rounded-lg flex items-center gap-2 transition-all transform opacity-50 cursor-not-allowed font-medium"
-              style={{
-                backgroundColor: project.themeColor
-              }}
-            >
-              <span>Check it out!</span>
-              <HiArrowUpRight className="w-5 h-5" />
-            </button>
-          ) : (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white px-8 py-3 rounded-lg flex items-center gap-2 transition-all transform hover:scale-105 hover:brightness-90 font-medium group"
-              style={{
-                backgroundColor: project.themeColor
-              }}
-            >
-              <span>Check it out!</span>
-              <HiArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
           )}
         </div>
+        
+        <div className="relative w-32 h-32 mb-6">
+          <Image
+            src={project.logo}
+            alt={`${project.name} logo`}
+            fill
+            className="object-contain drop-shadow-lg"
+          />
+        </div>
+        
+        <h2 className="text-3xl font-bold mb-4 font-mono">{project.name}</h2>
+        
+        <p className="text-lg text-gray-600 mb-8 font-serif leading-relaxed">
+          {project.description}
+        </p>
+        
+        {project.name === "Stong" ? (
+          <button
+            disabled
+            className="text-white px-8 py-3 rounded-full flex items-center gap-2 transition-all transform opacity-50 cursor-not-allowed font-medium retro-shadow"
+            style={{
+              backgroundColor: project.themeColor
+            }}
+          >
+            <span>Check it out!</span>
+            <HiArrowUpRight className="w-5 h-5" />
+          </button>
+        ) : (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white px-8 py-3 rounded-full flex items-center gap-2 transition-all transform hover:scale-105 hover:brightness-90 font-medium retro-shadow"
+            style={{
+              backgroundColor: project.themeColor
+            }}
+          >
+            <span>Check it out!</span>
+            <HiArrowUpRight className="w-5 h-5" />
+          </a>
+        )}
       </div>
     </div>
   )
