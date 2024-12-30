@@ -12,13 +12,31 @@ interface Project {
 
 interface ProjectModalProps {
   project: Project
+  position: { x: number, y: number }
   onClose: () => void
 }
 
-export default function ProjectModal({ project, onClose }: ProjectModalProps) {
+export default function ProjectModal({ project, position, onClose }: ProjectModalProps) {
+  // Calculate transform origin relative to viewport center
+  const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 0
+  const viewportHeight = typeof window !== 'undefined' ? window.innerHeight : 0
+  const originX = ((position.x / viewportWidth) * 100).toFixed(2)
+  const originY = ((position.y / viewportHeight) * 100).toFixed(2)
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 backdrop-blur-sm">
-      <div className="bg-white rounded-xl max-w-2xl w-full p-8 relative shadow-2xl transform transition-all">
+    <div 
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50 
+      animate-[fade-in_300ms_ease-out]"
+      onClick={onClose}
+    >
+      <div 
+        className="bg-white rounded-2xl max-w-2xl w-full p-8 relative shadow-xl
+        animate-[expand_500ms_cubic-bezier(0.16,1,0.3,1)]"
+        onClick={e => e.stopPropagation()}
+        style={{
+          transformOrigin: `${originX}% ${originY}%`
+        }}
+      >
         <button
           onClick={onClose}
           className="absolute top-6 right-6 text-gray-500 hover:text-gray-700 transition-colors"

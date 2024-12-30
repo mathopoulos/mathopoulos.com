@@ -11,6 +11,10 @@ interface Project {
   description: string
   url: string
   themeColor: string
+  label?: {
+    text: string
+    color: string
+  }
 }
 
 const projects: Project[] = [
@@ -22,23 +26,43 @@ const projects: Project[] = [
     themeColor: "#298FCA"
   },
   {
+    name: "Stong",
+    logo: "/bicept.png",
+    description: "A health and fitness app that helps you track your workouts and achieve your fitness goals.",
+    url: "https://stong.app",
+    themeColor: "#22C55E",
+    label: {
+      text: "Coming soon",
+      color: "#8B5CF6"
+    }
+  },
+  {
     name: "Foundation",
     logo: "/foundation-logo.png",
     description: "Buy real estate with your friends & community - powered by web3. Create an investment proposal, share it with others, pool funds, and then sit back, and relax while we acquire it for you.",
     url: "https://labeling-touch-529689.framer.app/",
-    themeColor: "#6E3FF3"
+    themeColor: "#6E3FF3",
+    label: {
+      text: "Shut down",
+      color: "#DC2626"
+    }
   },
   {
     name: "BuildOS",
     logo: "/crane-logo.png",
     description: "The first platform where code & no-code developers work together. The modern way to build software.",
     url: "https://buildos.framer.website/",
-    themeColor: "#4A4A4A"
+    themeColor: "#4A4A4A",
+    label: {
+      text: "Shut down",
+      color: "#DC2626"
+    }
   }
 ]
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [modalPosition, setModalPosition] = useState<{ x: number, y: number } | null>(null)
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-12">
@@ -50,15 +74,23 @@ export default function Home() {
             key={project.name}
             name={project.name}
             logo={project.logo}
-            onClick={() => setSelectedProject(project)}
+            onClick={(position) => {
+              setModalPosition(position)
+              setSelectedProject(project)
+            }}
+            label={project.label}
           />
         ))}
       </div>
 
-      {selectedProject && (
+      {selectedProject && modalPosition && (
         <ProjectModal
           project={selectedProject}
-          onClose={() => setSelectedProject(null)}
+          position={modalPosition}
+          onClose={() => {
+            setSelectedProject(null)
+            setModalPosition(null)
+          }}
         />
       )}
     </main>
