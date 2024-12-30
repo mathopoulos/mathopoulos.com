@@ -10,9 +10,9 @@ export default function ProjectCard({ name, logo, onClick }: ProjectCardProps) {
   return (
     <button
       onClick={onClick}
-      className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-left w-full border border-gray-100"
+      className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-left w-full border border-gray-100"
     >
-      <div className="relative w-16 h-16 mb-4">
+      <div className="relative w-20 h-20 mb-6">
         <Image
           src={logo}
           alt={`${name} logo`}

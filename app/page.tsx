@@ -14,22 +14,22 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Project 1",
-    logo: "/project1-logo.png",
+    name: "Foundation",
+    logo: "/foundation-logo.png",
     description: "A revolutionary app that helps users manage their daily tasks with AI-powered suggestions and smart organization features.",
     url: "https://project1.com"
   },
   {
-    name: "Project 2",
-    logo: "/project1-logo.png",
+    name: "BuildOS",
+    logo: "/crane-logo.png",
     description: "An innovative platform connecting freelancers with clients, featuring real-time collaboration tools and secure payments.",
     url: "https://project2.com"
   },
   {
-    name: "Project 3",
-    logo: "/project1-logo.png",
-    description: "A mobile-first solution for tracking personal fitness goals, with customized workout plans and nutrition advice.",
-    url: "https://project3.com"
+    name: "Trello",
+    logo: "/trello-logo.png",
+    description: "The visual collaboration tool that empowers teams to ideate, plan, manage, and deliver their best work.",
+    url: "https://trello.com"
   },
   {
     name: "Project 4",
@@ -55,10 +55,10 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-8">
+    <main className="max-w-6xl mx-auto px-6 py-12">
       <ProfileSection />
       
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
         {projects.map((project) => (
           <ProjectCard
             key={project.name}
