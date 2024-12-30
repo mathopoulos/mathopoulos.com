@@ -31,11 +31,11 @@ export default function ProjectModal({ project, position, onClose }: ProjectModa
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div
-        className="fixed inset-0 bg-black/40 backdrop-blur-sm"
+        className="fixed inset-0 bg-black/40 backdrop-blur-sm animate-[backdropFadeIn_200ms_ease-out]"
         onClick={onClose}
       />
       <div
-        className="bg-white p-8 rounded-2xl max-w-2xl w-full mx-4 relative flex flex-col items-center text-center retro-shadow retro-border"
+        className="bg-white p-8 rounded-2xl max-w-2xl w-full mx-4 relative flex flex-col items-center text-center retro-shadow retro-border animate-[modalFadeIn_250ms_cubic-bezier(0.16,1,0.3,1)]"
         style={{
           backgroundImage: 'url("data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M5 0h1L0 6V5zM6 5v1H5z"/%3E%3C/g%3E%3C/svg%3E")'
         }}

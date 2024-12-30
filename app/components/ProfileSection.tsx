@@ -16,9 +16,9 @@ export default function ProfileSection() {
       
       <div className="flex flex-col gap-4">
         <div>
-          <h1 className="text-4xl font-bold mb-2 font-mono">Alexandros Mathopoulos</h1>
+          <h1 className="text-4xl font-bold mb-2 font-mono">Lex Mathopoulos</h1>
           <p className="text-lg text-gray-600 font-serif">
-            Building products that make people's lives better.
+            Part time Designer, Engineer, & Product Manager.
           </p>
           <p className="text-lg text-gray-600 font-serif">
             Currently focused on building some new health apps and making Trello great again.
