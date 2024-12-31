@@ -1,16 +1,17 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import JsonLd from './components/JsonLd'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: '🚀 Lex Mathopoulos',
-  description: 'Part time Designer, Engineer, & Product Manager. Currently focused on building some new health apps and making Trello great again.',
+  description: 'Lex (Alexandros) Mathopoulos - Part time Designer, Engineer, & Product Manager. Currently focused on building some new health apps and making Trello great again.',
   metadataBase: new URL('https://mathopoulos.com'),
   openGraph: {
-    title: '🚀 Lex Mathopoulos',
-    description: 'Part time Designer, Engineer, & Product Manager. Currently focused on building some new health apps and making Trello great again.',
+    title: '🚀 Lex (Alexandros) Mathopoulos',
+    description: 'Lex (Alexandros) Mathopoulos - Part time Designer, Engineer, & Product Manager. Currently focused on building some new health apps and making Trello great again.',
     url: 'https://mathopoulos.com',
     siteName: 'Lex Mathopoulos',
     locale: 'en_US',
@@ -18,10 +19,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '🚀 Lex Mathopoulos',
-    description: 'Part time Designer, Engineer, & Product Manager. Currently focused on building some new health apps and making Trello great again.',
+    title: '🚀 Lex (Alexandros) Mathopoulos',
+    description: 'Lex (Alexandros) Mathopoulos - Part time Designer, Engineer, & Product Manager. Currently focused on building some new health apps and making Trello great again.',
     creator: '@lex_build',
   },
+  alternates: {
+    canonical: 'https://mathopoulos.com'
+  },
+  keywords: ['Lex Mathopoulos', 'Alexandros Mathopoulos', 'Product Manager', 'Engineer', 'Designer', 'Trello', 'Health Apps'],
   robots: {
     index: true,
     follow: true,
@@ -45,7 +50,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <JsonLd />
+        {children}
+      </body>
     </html>
   )
 } 
