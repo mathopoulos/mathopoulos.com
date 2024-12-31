@@ -5,15 +5,36 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Lex Mathopoulos',
+  title: '🚀 Lex Mathopoulos',
   description: 'Part time Designer, Engineer, & Product Manager. Currently focused on building some new health apps and making Trello great again.',
-  icons: {
-    icon: [
-      {
-        url: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>',
-        type: 'image/svg+xml',
-      },
-    ],
+  metadataBase: new URL('https://mathopoulos.com'),
+  openGraph: {
+    title: '🚀 Lex Mathopoulos',
+    description: 'Part time Designer, Engineer, & Product Manager. Currently focused on building some new health apps and making Trello great again.',
+    url: 'https://mathopoulos.com',
+    siteName: 'Lex Mathopoulos',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '🚀 Lex Mathopoulos',
+    description: 'Part time Designer, Engineer, & Product Manager. Currently focused on building some new health apps and making Trello great again.',
+    creator: '@lex_build',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // You'll need to add this later
   },
 }
 
