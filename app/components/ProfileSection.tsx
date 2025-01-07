@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaTwitter, FaHeartbeat } from 'react-icons/fa'
 
 export default function ProfileSection() {
   return (
@@ -41,6 +41,14 @@ export default function ProfileSection() {
             className="text-gray-600 hover:text-gray-900 transition-colors hover-lift"
           >
             <FaTwitter size={24} />
+          </a>
+          <a
+            href="https://health-stats-6e2p.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors hover-lift"
+          >
+            <FaHeartbeat size={24} />
           </a>
         </div>
       </div>
