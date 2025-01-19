@@ -28,6 +28,14 @@ const projects: Project[] = [
     role: "Product Manager"
   },
   {
+    name: "Revly",
+    logo: "/revly-logo.svg",
+    description: "Join the movement of radical health transparency. Track your health metrics, share your wellness journey, and inspire your community to live their healthiest lives.",
+    url: "https://www.revly.health",
+    themeColor: "#8B5CF6",
+    role: "Founder"
+  },
+  {
     name: "Stong",
     logo: "/bicept.png",
     description: "A health and fitness app that helps you track your workouts and achieve your fitness goals.",

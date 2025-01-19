@@ -43,7 +43,7 @@ export default function ProfileSection() {
             <FaTwitter size={24} />
           </a>
           <a
-            href="https://health-stats-6e2p.vercel.app/"
+            href="https://www.revly.health/dashboard/userId=100492380040453908509"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-gray-900 transition-colors hover-lift"
