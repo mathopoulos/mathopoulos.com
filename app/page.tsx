@@ -30,8 +30,8 @@ const projects: Project[] = [
   {
     name: "Revly",
     logo: "/revly-logo.svg",
-    description: "Join the movement of radical health transparency. Track your health metrics, share your wellness journey, and inspire your community to live their healthiest lives.",
-    url: "https://www.revly.health",
+    description: "A health analytics platform that helps you track and understand your health data to make better decisions.",
+    url: "https://www.revly.health/dashboard/user_32iOcY7aZLXPO5DD7iaVPepE6wQ",
     themeColor: "#8B5CF6",
     role: "Founder"
   },
