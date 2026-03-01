@@ -12,6 +12,7 @@ interface Project {
   url: string
   themeColor: string
   role: string
+  hideCta?: boolean
   label?: {
     text: string
     color: string
@@ -50,10 +51,11 @@ const projects: Project[] = [
   {
     name: "Foundation",
     logo: "/foundation-logo.png",
-    description: "Buy real estate with your friends & community - powered by web3. Create an investment proposal, share it with others, pool funds, and then sit back, and relax while we acquire it for you.",
+    description: "Buy real estate with your friends & community. Create an investment proposal, share it with others, pool funds, and then sit back, and relax while we acquire it for you.",
     url: "https://labeling-touch-529689.framer.app/",
     themeColor: "#6E3FF3",
     role: "Founder",
+    hideCta: true,
     label: {
       text: "Shut down",
       color: "#DC2626"

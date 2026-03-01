@@ -9,6 +9,7 @@ interface Project {
   url: string
   themeColor: string
   role: string
+  hideCta?: boolean
   label?: {
     text: string
     color: string
@@ -86,30 +87,32 @@ export default function ProjectModal({ project, position, onClose }: ProjectModa
           {project.description}
         </p>
         
-        {project.name === "Stong" ? (
-          <button
-            disabled
-            className="text-white px-8 py-3 rounded-full flex items-center gap-2 transition-all transform opacity-50 cursor-not-allowed font-medium retro-shadow"
-            style={{
-              backgroundColor: project.themeColor
-            }}
-          >
-            <span>Check it out!</span>
-            <HiArrowUpRight className="w-5 h-5" />
-          </button>
-        ) : (
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white px-8 py-3 rounded-full flex items-center gap-2 transition-all transform hover:scale-105 hover:brightness-90 font-medium retro-shadow"
-            style={{
-              backgroundColor: project.themeColor
-            }}
-          >
-            <span>Check it out!</span>
-            <HiArrowUpRight className="w-5 h-5" />
-          </a>
+        {!project.hideCta && (
+          project.name === "Stong" ? (
+            <button
+              disabled
+              className="text-white px-8 py-3 rounded-full flex items-center gap-2 transition-all transform opacity-50 cursor-not-allowed font-medium retro-shadow"
+              style={{
+                backgroundColor: project.themeColor
+              }}
+            >
+              <span>Check it out!</span>
+              <HiArrowUpRight className="w-5 h-5" />
+            </button>
+          ) : (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white px-8 py-3 rounded-full flex items-center gap-2 transition-all transform hover:scale-105 hover:brightness-90 font-medium retro-shadow"
+              style={{
+                backgroundColor: project.themeColor
+              }}
+            >
+              <span>Check it out!</span>
+              <HiArrowUpRight className="w-5 h-5" />
+            </a>
+          )
         )}
       </div>
     </div>
