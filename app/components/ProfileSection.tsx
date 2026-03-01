@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { FaGithub, FaTwitter, FaHeartbeat } from 'react-icons/fa'
 
 export default function ProfileSection() {
@@ -18,7 +17,7 @@ export default function ProfileSection() {
         <div>
           <h1 className="text-3xl sm:text-4xl font-bold mb-2 font-mono">Lex Mathopoulos</h1>
           <p className="text-base sm:text-lg text-gray-600 font-serif">
-            Part time Designer, Engineer, & Product Manager.
+            Part time Designer, Engineer, & Product Manager. Full time tinkerer.
           </p>
           <p className="text-base sm:text-lg text-gray-600 font-serif">
             Currently focused on building some new health apps and making Trello great again.
